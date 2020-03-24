@@ -15,6 +15,10 @@
 		97A7E41D24299E4000C89C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97A7E41B24299E4000C89C97 /* LaunchScreen.storyboard */; };
 		97A7E42824299E4000C89C97 /* KivaLoanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A7E42724299E4000C89C97 /* KivaLoanTests.swift */; };
 		97A7E43324299E4000C89C97 /* KivaLoanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A7E43224299E4000C89C97 /* KivaLoanUITests.swift */; };
+		97A7E44224299FC600C89C97 /* loansTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A7E44124299FC600C89C97 /* loansTableViewCell.swift */; };
+		97A7E4452429A37300C89C97 /* loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A7E4442429A37300C89C97 /* loan.swift */; };
+		97A7E4482429ABF200C89C97 /* loanVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A7E4472429ABF200C89C97 /* loanVM.swift */; };
+		97A7E44B2429B15D00C89C97 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A7E44A2429B15D00C89C97 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		97A7E42E24299E4000C89C97 /* KivaLoanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KivaLoanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A7E43224299E4000C89C97 /* KivaLoanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KivaLoanUITests.swift; sourceTree = "<group>"; };
 		97A7E43424299E4000C89C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97A7E44124299FC600C89C97 /* loansTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loansTableViewCell.swift; sourceTree = "<group>"; };
+		97A7E4442429A37300C89C97 /* loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loan.swift; sourceTree = "<group>"; };
+		97A7E4472429ABF200C89C97 /* loanVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loanVM.swift; sourceTree = "<group>"; };
+		97A7E44A2429B15D00C89C97 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,10 @@
 		97A7E40424299E3F00C89C97 = {
 			isa = PBXGroup;
 			children = (
+				97A7E4492429B14100C89C97 /* Service */,
+				97A7E4462429ABDC00C89C97 /* ViewModel */,
+				97A7E4432429A35200C89C97 /* Model */,
+				97A7E44024299F9D00C89C97 /* View */,
 				97A7E40F24299E3F00C89C97 /* KivaLoan */,
 				97A7E42624299E4000C89C97 /* KivaLoanTests */,
 				97A7E43124299E4000C89C97 /* KivaLoanUITests */,
@@ -101,8 +113,6 @@
 			children = (
 				97A7E41024299E3F00C89C97 /* AppDelegate.swift */,
 				97A7E41224299E3F00C89C97 /* SceneDelegate.swift */,
-				97A7E41424299E3F00C89C97 /* ViewController.swift */,
-				97A7E41624299E3F00C89C97 /* Main.storyboard */,
 				97A7E41924299E4000C89C97 /* Assets.xcassets */,
 				97A7E41B24299E4000C89C97 /* LaunchScreen.storyboard */,
 				97A7E41E24299E4000C89C97 /* Info.plist */,
@@ -126,6 +136,40 @@
 				97A7E43424299E4000C89C97 /* Info.plist */,
 			);
 			path = KivaLoanUITests;
+			sourceTree = "<group>";
+		};
+		97A7E44024299F9D00C89C97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97A7E44124299FC600C89C97 /* loansTableViewCell.swift */,
+				97A7E41424299E3F00C89C97 /* ViewController.swift */,
+				97A7E41624299E3F00C89C97 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97A7E4432429A35200C89C97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97A7E4442429A37300C89C97 /* loan.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97A7E4462429ABDC00C89C97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				97A7E4472429ABF200C89C97 /* loanVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		97A7E4492429B14100C89C97 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				97A7E44A2429B15D00C89C97 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +304,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				97A7E41524299E3F00C89C97 /* ViewController.swift in Sources */,
+				97A7E44B2429B15D00C89C97 /* Service.swift in Sources */,
 				97A7E41124299E3F00C89C97 /* AppDelegate.swift in Sources */,
+				97A7E4482429ABF200C89C97 /* loanVM.swift in Sources */,
 				97A7E41324299E3F00C89C97 /* SceneDelegate.swift in Sources */,
+				97A7E4452429A37300C89C97 /* loan.swift in Sources */,
+				97A7E44224299FC600C89C97 /* loansTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
